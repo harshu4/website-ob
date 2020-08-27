@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Mono', monospace;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  background: radial-gradient(black, #111111);
+}
+
+.flex-center{
+  display: flex;
+
+}
+
+.root{
+  color: green;
+  width: 100%;
+/*   background-color: grey; */
+  max-height: 50%;
+  font-size: 16px;
+}
+
+.control{
+  height: 10%;
+/*   background-color:red; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.control span{
+  cursor: pointer;
+}
+
+.hidden{
+  visibility: hidden;
+}

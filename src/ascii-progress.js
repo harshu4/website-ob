@@ -83,6 +83,12 @@
         }
     }
 
+    AsciiProgress.prototype.changeLength = function () {
+        this.options.length=(90*window.innerWidth)/1453;
+        console.log("length changed to " + this.options.length)
+        redraw.call(this, this.value)
+    }
+
     // Private Methods
     function init() {
 

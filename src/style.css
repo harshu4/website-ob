@@ -12,6 +12,17 @@ body{
   background: radial-gradient(black, #111111);
 }
 
+.square {
+    background: white;
+    width: 8px;
+    height: 14px;
+    align-self:flex-end ;
+}
+
+.newdiv{
+    display: flex;
+  flex-direction: row;
+}
 .flex-center{
   display: flex;
 

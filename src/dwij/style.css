@@ -12,6 +12,16 @@ body{
   background: radial-gradient(black, #111111);
 }
 
+#our_logo{
+    color: white;
+    font-size: 2;
+     white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+}
+
 .square {
     background: white;
     width: 8px;

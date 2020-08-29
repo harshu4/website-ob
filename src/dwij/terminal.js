@@ -53,7 +53,18 @@ class PrintCommander {
 
 }
 
+window.addEventListener("resize", ()=>{
+    let ob_logo=document.getElementById("our_logo");
+    ob_logo.style.fontSize=(14*window.innerWidth)/1453;
+     ob_logo.style.color="white";
+   
+});
+
 (async function () {
+    let ob_logo=document.getElementById("our_logo");
+    ob_logo.style.fontSize=(14*window.innerWidth)/1453;
+     ob_logo.style.color="white";
+    
     for (cmd of commands) {
         if (cmd["type"] == "command") {
             let str = cmd["str"]

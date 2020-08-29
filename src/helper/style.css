@@ -12,15 +12,25 @@ body{
   background: radial-gradient(black, #111111);
 }
 
+.square {
+    background: white;
+    width: 8px;
+    height: 14px;
+    align-self:flex-end ;
+}
+
+.newdiv{
+    display: flex;
+  flex-direction: row;
+}
 .flex-center{
   display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 .root{
-  color: white;
-  width: 50%;
+  color: green;
+  width: 100%;
 /*   background-color: grey; */
   max-height: 50%;
   font-size: 16px;

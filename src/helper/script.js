@@ -15,7 +15,7 @@ terminal.appendChild(newLine);
 let str = `The variable raw contains a string with 1,176,893 characters. (We can see that it is a string, using type(raw).) This is the raw content of the book, including many details we are not interested in such as whitespace, line breaks and blank lines. Notice the \r and \n in the opening line of the file, which is how Python displays the special carriage return and line feed characters (the file must have been created on a Windows machine). For our language processing, we want to break up the string into words and punctuation, as we saw in 1.. This step is called tokenization, and it produces our familiar structure, a list of words and punctuation.`
 
 var progressBar = new AsciiProgress("progressbar",{
-  length: 22,
+  length: (90*window.innerWidth)/1453,
   value: 100,
   completeAt: 100,
   showPercent: true,
@@ -27,7 +27,7 @@ window.addEventListener("resize", ()=>{
     progressBar.changeLength();
 });
 
-sayItSlowly('OB', "Alien", str);
+sayItSlowly('Guest', "OverclockedBrains", str);
 
 function sayItSlowly(user, place, str){
   let username = `${user}@${place}:~$ `;
@@ -86,7 +86,7 @@ function pause(){
 
 function printChar(char,counter){
 
-    counter = counter + 49
+    counter = counter + 54
     if(counter%7==0){
         if(counterBool){
             newLine.innerHTML = newLine.innerHTML.slice(0,counter);

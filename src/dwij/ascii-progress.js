@@ -38,7 +38,7 @@
         // Create global element references
         this.parent = arguments[0]
         this.progressText = this.parent.appendChild(document.createElement('p'))
-        this.progressText.innerHTML = `HTTP request sent, awaiting response...</br> Location: ${this.options.url} </br> HTTP request sent, awaiting response... 200 OK </br> Length: unspecified [text/html] </br> Saving to: ${this.options.filename} `
+        this.progressText.innerHTML = `HTTP request sent, awaiting response...</br> Location: ${this.options.url} </br> HTTP request sent, awaiting response... 200 OK </br> Length: unspecified [text/html] </br> Saving to: ${this.options.filename} </br>Resolving ${this.options.url} (${this.options.url})... 2404:6800:4009:80d::2004, 172.217.166.68`
         this.progressElement = this.parent.appendChild(document.createElement("div"))
         
         if(this.options.showComment){

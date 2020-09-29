@@ -6,11 +6,11 @@
 
 html, body{
   height: 100%;
-  overflow: hidden;
 }
 
 body{
   background: radial-gradient(black, #111111);
+  overflow: hidden;
 }
 
 #our_logo{
@@ -43,7 +43,7 @@ body{
   color: green;
   width: 100%;
 /*   background-color: grey; */
-  max-height: 50%;
+  max-height: 100%;
   font-size: 16px;
 }
 

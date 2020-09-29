@@ -45,6 +45,8 @@ class PrintCommander {
                     clearInterval(interval);
                     resolutionFunc();
                 }
+                window.scrollTo(0, document.body.scrollHeight);
+
             }, 50)
         })
     }
@@ -61,6 +63,8 @@ class PrintCommander {
                     clearInterval(interval);
                     resolutionFunc();
                 }
+                window.scrollTo(0, document.body.scrollHeight);
+
             }, 400)
         })
     }

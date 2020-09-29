@@ -127,6 +127,7 @@
         }
 
         this.progressElement.innerText = str
+        window.scrollTo(0, document.body.scrollHeight);
     }
 
 

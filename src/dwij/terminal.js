@@ -61,7 +61,7 @@ class PrintCommander {
                     clearInterval(interval);
                     resolutionFunc();
                 }
-            }, 50)
+            }, 400)
         })
     }
 

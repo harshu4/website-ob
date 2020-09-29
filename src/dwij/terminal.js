@@ -1,6 +1,6 @@
 const terminal = document.getElementsByClassName("root")[0];
 //const body = document.getElementsByTagName("body")[0];
-const commands = [{ type: "command", str: "Its first test with wonderful terminal by OB." }, { type: "command", str: "Its second test with wonderful terminal by OB." }, { type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" },]
+const commands = [{ type: "command", str: "Its first test with wonderful terminal by OB." }, { type: "command", str: "Its second test with wonderful terminal by OB." }, { type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" },{ type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" },{ type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" },{ type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" },{ type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" }]
 let progresslist = []
 
 class PrintCommander {
@@ -45,6 +45,8 @@ class PrintCommander {
                     clearInterval(interval);
                     resolutionFunc();
                 }
+                window.scrollTo(0,document.body.scrollHeight);
+
             }, 50)
         })
     }
@@ -61,7 +63,9 @@ class PrintCommander {
                     clearInterval(interval);
                     resolutionFunc();
                 }
-            }, 50)
+                window.scrollTo(0,document.body.scrollHeight);
+
+            }, 400)
         })
     }
 

@@ -1,7 +1,7 @@
 const terminal = document.getElementsByClassName("root")[0];
 //const body = document.getElementsByTagName("body")[0];
 const commands = [{ type: "command", str: "Its first test with wonderful terminal by OB." }, { type: "command", str: "Its second test with wonderful terminal by OB." }, { type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" },]
-
+let progresslist = []
 
 class PrintCommander {
     constructor(str) {
@@ -71,6 +71,10 @@ window.addEventListener("resize", () => {
     let ob_logo = document.getElementById("our_logo");
     ob_logo.style.fontSize = (14 * window.innerWidth) / 1453;
     ob_logo.style.color = "white";
+    progresslist.forEach((name) => {
+        name.changeLength()
+
+    })
 
 });
 
@@ -96,7 +100,18 @@ window.addEventListener("resize", () => {
             await pc.sayItLineByLine(`HTTP request sent, awaiting response...\nLocation: ${url}\nHTTP request sent, awaiting response... 200 OK\nLength: unspecified [text/html]\nSaving to: ${name}`)
             a = document.createElement("p");
             terminal.appendChild(a)
-            downloader(url, "sfd", a, name, url)
+            progress = new AsciiProgress(a, {
+                length: (90 * window.innerWidth) / 1453,
+                value: 0,
+                completeAt: 100,
+                showPercent: true,
+                url: url,
+                percentDecimalPlaces: 2,
+                percentLocation: "middle",
+                filename: name,
+            });
+            progresslist.push(progress)
+            downloader(url, progress)
 
         }
     }

@@ -1,17 +1,8 @@
 console.log("called")
-function downloader(url, type,element,filename,url) {
+function downloader(url,progress) {
     return new Promise((resolutionFunc, rejectionFunc) => {
        
-        var progressBar = new AsciiProgress(element, {
-            length: (90 * window.innerWidth) / 1453,
-            value: 0,
-            completeAt: 100,
-            showPercent: true,
-            url:url,
-            percentDecimalPlaces: 2,
-            percentLocation: "middle",
-            filename: filename,
-        });
+        var progressBar = progress
         request = new XMLHttpRequest();
         request.responseType = 'text';
         request.open('get', url, true);

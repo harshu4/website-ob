@@ -10,11 +10,11 @@
             loadedCharacter: "#",
             backgroundCharacter: " ",
             closeCharacter: "]",
-
+            filename:"private_key.pem",
             showComment: true,
             startingComment: " ",
             commentLocation: "bottom",
-
+            url:"www.secretsite.com",
             length: 120,
             value: 0,
             completeAt: 100,
@@ -36,9 +36,9 @@
         }
 
         // Create global element references
-        this.parent = document.getElementById(arguments[0])
-        this.parent.innerHTML = ""
-
+        this.parent = arguments[0]
+        this.progressText = this.parent.appendChild(document.createElement('p'))
+        this.progressText.innerHTML = `HTTP request sent, awaiting response...</br> Location: ${this.options.url} </br> HTTP request sent, awaiting response... 200 OK </br> Length: unspecified [text/html] </br> Saving to: ${this.options.filename} `
         this.progressElement = this.parent.appendChild(document.createElement("div"))
         
         if(this.options.showComment){
@@ -107,7 +107,7 @@
         var amountPerBlock = this.options.completeAt / this.options.length //percentage per #
         var blocks = Math.ceil(this.value / amountPerBlock);  //current draw #
 
-        this.progressElement.innerText = ""
+        this.progressElement.innerHTML = ""
         var str = ""
         str += this.options.openCharacter
         str += this.options.loadedCharacter.repeat(blocks)

@@ -1,6 +1,6 @@
 const terminal = document.getElementsByClassName("root")[0];
 //const body = document.getElementsByTagName("body")[0];
-const commands = [{ type: "command", str: "Its first test with wonderful terminal by OB." }, { type: "command", str: "Its second test with wonderful terminal by OB." }]
+const commands = [{ type: "command", str: "Its first test with wonderful terminal by OB." }, { type: "command", str: "Its second test with wonderful terminal by OB." },{ type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js",name:"three.js" },]
 
 
 class PrintCommander {
@@ -8,6 +8,7 @@ class PrintCommander {
         this.newLine = document.createElement("p");
         this.counterBool = true;
         this.str = str;
+        console.log(str)
     }
 
     printChar(char, counter) {
@@ -73,8 +74,16 @@ window.addEventListener("resize", ()=>{
             await pc.sayItSlowly()
         } else if (cmd["type"] == "text") {
             let str = cmd["str"]
-        } else if (cmd["type"] == "download") {
-            let str = cmd["link"]
+        } else if (cmd["type"] == "link") {
+            let url = cmd["link"]
+            let name = cmd['name']
+            let pc = new PrintCommander(`wget ${url}`)
+            terminal.appendChild(pc.newLine);
+            await pc.sayItSlowly()
+            a = document.createElement("p");
+            terminal.appendChild(a)
+            downloader(url, "sfd",a,name,url)
+            
         }
     }
 })()

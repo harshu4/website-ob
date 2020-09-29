@@ -1,13 +1,16 @@
 console.log("called")
-function dowloader(url, type) {
+function downloader(url, type,element,filename,url) {
     return new Promise((resolutionFunc, rejectionFunc) => {
-        var progressBar = new AsciiProgress("progressbar", {
+       
+        var progressBar = new AsciiProgress(element, {
             length: (90 * window.innerWidth) / 1453,
             value: 0,
             completeAt: 100,
             showPercent: true,
+            url:url,
             percentDecimalPlaces: 2,
-            percentLocation: "middle"
+            percentLocation: "middle",
+            filename: filename,
         });
         request = new XMLHttpRequest();
         request.responseType = 'text';
@@ -60,4 +63,3 @@ function injectScript(src) {
 
 
 
-//dowloader("https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", 'sfd')

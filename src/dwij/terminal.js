@@ -1,6 +1,6 @@
 const terminal = document.getElementsByClassName("root")[0];
 //const body = document.getElementsByTagName("body")[0];
-const commands = [{ type: "command", str: "Its first test with wonderful terminal by OB." }, { type: "command", str: "Its second test with wonderful terminal by OB." }, { type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" },]
+const commands = [{ type: "command", str: "Its first test with wonderful terminal by OB." }, { type: "command", str: "Its second test with wonderful terminal by OB." }, { type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" }, { type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" }, { type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" }, { type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" }, { type: "link", link: "https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js", name: "three.js" }]
 let progresslist = []
 
 class PrintCommander {
@@ -77,6 +77,7 @@ window.addEventListener("resize", () => {
     })
 
 });
+
 
 (async function () {
     let ob_logo = document.getElementById("our_logo");
